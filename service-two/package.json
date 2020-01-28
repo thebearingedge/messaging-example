@@ -1,0 +1,32 @@
+{
+  "name": "service-two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node --unhandled-rejections=strict -r esm -r dotenv/config .",
+    "watch": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+    "exec": "npm run -s start",
+    "watch": [
+      "server/",
+      ".env"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "0.5.5",
+    "aws-sdk": "^2.610.0",
+    "dotenv": "^8.2.0",
+    "esm": "3.2.25",
+    "express": "^4.17.1",
+    "pg": "^7.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.2"
+  }
+}

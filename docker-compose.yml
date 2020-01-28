@@ -1,0 +1,7 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.8.2-alpine
+    ports:
+      - 5672:5672
